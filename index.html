@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="overlay"></div>
+    <header>
+        <div class="nav">
+            <div class="nav-bar">
+                <div class="menu-bar">
+                    <img src="/img/icon-menu.svg" alt="icon" id="menu-icon">
+                </div>
+                <div class="logo">
+                    <img src="/img/logo.svg" alt="logo">
+                </div>
+                <ul id="nav-links">
+                    <div class="close-bar">
+                        <img src="/img/icon-close.svg" alt="close-icon" id="close-menu">
+                    </div>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-bar">
+                <div class="cart-box">
+                    <div class="cart-sum">
+                        <p id="cart-sum">0</p>
+                    </div>
+                    <img src="/img/icon-cart.svg" alt="icon-cart" id="add-to-cart">
+                </div>
+                <div class="profile-img">
+                    <img src="/img/image-avatar.png" alt="image-avatar">
+                </div>
+
+                <div id="cart">
+                    <div class="cart-heading">
+                        <h3>Cart</h3>
+                    </div>
+                    <div class="cart-content">
+                        <div class="cart-img">
+                            <img src="/img/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
+                        </div>
+                        <div class="cart-name">
+                            <p>Fall Limited Edition Sneakers</p>
+                            <p>$<span id="price">125.00</span> x <span id="total-num">0 </span> <b class="total-price">$<span id="total-price">0.00</b></span></p>
+                        </div>
+                        <div class="trash-box">
+                            <img src="/img/icon-delete.svg" alt="icon-delete" id="trash">
+                        </div>
+                    </div>
+                    <div class="cart-btn">
+                        <button>Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="main">
+        <div class="main-container">
+            <div class="image-card">
+                <div class="image-box">
+                     <div class="mob-view1">
+                            <img src="/img/icon-previous.svg" alt="icon-previous" id="previous-arrow">
+                    </div>
+                    <img src="/img/image-product-1.jpg" alt="image-product-1" id="image-switch" height="380" width="500">
+                    <div class="mob-view2">
+                            <img src="/img/icon-next.svg" alt="icon-next" id="next-arrow">
+                    </div>
+                </div>
+                <div class="image-row">
+                    <div class="img-col">
+                        <img src="/img/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail" onclick="imageClick(0)">
+                    </div>
+
+                    <div class="img-col">
+                        <img src="/img/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail" onclick="imageClick(1)">
+                    </div>
+
+                    <div class="img-col">
+                        <img src="/img/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail" onclick="imageClick(2)">
+                    </div>
+
+                    <div class="img-col">
+                        <img src="/img/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail" onclick="imageClick(3)">
+                    </div>
+                </div>
+
+                <div class="light-box">
+                    <div class="close-menu">
+                        <img src="/img/icon-close.svg" alt="close-menu" id="close-icon">
+                    </div>
+                     <div class="image-box">
+                        <div class="cont-arrow1">
+                            <img src="/img/icon-previous.svg" alt="icon-previous" id="previous-arrow">
+                        </div>
+                        <img src="/img/image-product-1.jpg" alt="image-product-1" id="image-switch2" height="380" >
+                        <div class="cont-arrow2">
+                            <img src="/img/icon-next.svg" alt="icon-next" id="next-arrow">
+                        </div>
+                    </div>
+                <div class="image-row">
+                    <div class="img-col">
+                        <img src="/img/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail" onclick="imageClick(0)">
+                    </div>
+
+                    <div class="img-col">
+                        <img src="/img/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail" onclick="imageClick(1)">
+                    </div>
+
+                    <div class="img-col">
+                        <img src="/img/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail" onclick="imageClick(2)">
+                    </div>
+
+                    <div class="img-col">
+                        <img src="/img/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail" onclick="imageClick(3)">
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="text-card">
+                <div class="text-box">
+                    <span class="pre-heading">Sneaker Company</span>
+                    <h2>Fall Limited Edition Sneakers</h2>
+                    <p class="text-content">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                   <div class="price-box">
+                     <p class="price">$125.00 <span class="discount">50%</span></p>
+                    <p class="off-price">$250.00</p>
+                   </div>
+
+                    <div class="button-box">
+                        <div class="first-button">
+                            <div class="num-box">
+                                <img src="/img/icon-minus.svg" alt="icon-minus" onclick="minusCart()">
+                            </div>
+                            <p id="num-cart">0</p>
+                            <div class="num-box">
+                                <img src="/img/icon-plus.svg" alt="icon-plus" onclick="addCart()">
+                            </div>
+                        </div>
+                        <div class="second-button">
+                            <button onclick="addToCart()">
+                                <img src="/img/icon-cart.svg" alt="icon-cart" class="cart-bas">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/mainjs/main.js"></script>
+</body>
+</html>
