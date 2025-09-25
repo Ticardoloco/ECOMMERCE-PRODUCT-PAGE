@@ -50,6 +50,23 @@ document.getElementById('next-arrow').addEventListener('click', () => {
     }
     imageClick(imageNum)
 })
+document.getElementById('previous-arrow2').addEventListener('click', () => {
+    imageNum--
+    if (imageNum < 0) {
+        imageNum = 3
+    }
+
+
+    imageClick(imageNum)
+})
+document.getElementById('next-arrow2').addEventListener('click', () => {
+
+    imageNum++
+    if (imageNum > 3) {
+        imageNum = 0;
+    }
+    imageClick(imageNum)
+})
 
 function minusCart() {
     cartNum.innerText = Math.max(cartNum.innerText - 1, 0)
