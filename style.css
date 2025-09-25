@@ -484,3 +484,21 @@ button img {
   }
 }
 
+@media only screen and (max-width: 400px){
+ #cart{
+    max-width: 330px;
+    right: 26px;
+  }
+}
+
+@media only screen and (max-width: 360px){
+ #cart{
+    right: 16px;
+  }
+}
+@media only screen and (max-width: 345px){
+  #cart{
+    right: 8px;
+  }
+}
+
