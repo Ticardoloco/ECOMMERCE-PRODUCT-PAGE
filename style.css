@@ -458,6 +458,10 @@ button img {
   #nav-links{
     max-width: 250px;
   }
+  #cart{
+    max-width: 350px;
+    right: 32px;
+  }
   .price-box{
     display: flex;
     justify-content: space-between;
